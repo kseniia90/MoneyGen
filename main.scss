@@ -1,21 +1,14 @@
 @import './scss/normalize.scss';
 @import './scss/vars_and_mixins.scss';
 @import './scss/fonts.scss';
-// @import './scss/fonts_icon.scss';
 
 $light-green: #7AFFBF;
 $gray: #EFEFEF;
-// $icon-phone2_icon: "\e900";
-// $icon-phone_icon: "\e901";
-// $icon-mail_icon: "\e902";
-// $icon-telegram_icon: "\e903";
-// $icon-viber_icon: "\e904";
-// $icon-fb_icon: "\e905";
-
 
 body {
     @include font($font-robotoFlex, 16px, 19px, #000000); 
     font-weight: 300;
+    min-height: 100vh;
 }
 .container {
     max-width: 360px;
@@ -29,7 +22,6 @@ body {
     
 }
 .banner {
-    height: 100vh;
     @include flex(center, center, column);
     background: $light-green;
     background-image: url(./img/img_1.svg), linear-gradient(235.3deg, rgba(104, 255, 183, 0.88) -37.53%, rgba(12, 217, 227, 0.88) 123.11%);
@@ -62,7 +54,6 @@ body {
     font-weight: 400;
 }
 .instruction {
-    height: 100vh;
     background: $gray;
     @include flex(center, center, column);
     text-align: center;
@@ -153,7 +144,6 @@ body {
 }
 .home {
     background: $gray;
-    height: 100vh;
     @include flex(center, center, column);
     &__buttons {
         width: 100%;
@@ -566,7 +556,6 @@ body {
 .profile {
     background: $gray;
     @include flex(center, center, column);
-    height: 100vh;
     &__content {
         flex: 1 0 auto;
         padding: 0 3px;
@@ -603,7 +592,6 @@ body {
 .method {
     background: $gray;
     @include flex(center, center, column);
-    height: 100vh;
     &__content {
         flex: 1 0 auto;
         width: 100%;

@@ -347,6 +347,7 @@ body {
   line-height: 19px;
   color: #000000;
   font-weight: 300;
+  min-height: 100vh;
 }
 
 .container {
@@ -362,7 +363,6 @@ body {
 }
 
 .banner {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -417,7 +417,6 @@ body {
 }
 
 .instruction {
-  height: 100vh;
   background: #EFEFEF;
   display: flex;
   justify-content: center;
@@ -528,7 +527,6 @@ body {
 
 .home {
   background: #EFEFEF;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1067,7 +1065,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 }
 .profile__content {
   flex: 1 0 auto;
@@ -1121,7 +1118,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 }
 .method__content {
   flex: 1 0 auto;
