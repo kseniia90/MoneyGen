@@ -347,12 +347,11 @@ body {
   line-height: 19px;
   color: #000000;
   font-weight: 300;
-  min-height: 100vh;
 }
 
 .container {
-  max-width: 360px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .img-bock {
@@ -525,6 +524,11 @@ body {
   background: url(./img/footer_icon_right.svg) center no-repeat;
 }
 
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
 .home {
   background: #EFEFEF;
   display: flex;
@@ -544,7 +548,7 @@ body {
 .home__buttons-btn {
   white-space: nowrap;
   padding: 5px;
-  width: 165px;
+  width: 45.8333333333%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -855,7 +859,7 @@ body {
   font-family: "Roboto Light", sans-serif;
   line-height: 19px;
   color: #000000;
-  max-width: 235px;
+  max-width: 65.2777777778%;
 }
 .task .checklist__item__content-download .task__content-title .task__content-bolt {
   font-size: 16px;
@@ -911,7 +915,7 @@ body {
 }
 .task .checklist__item__content-download .task__content-btn {
   margin: 0 auto;
-  width: 140px;
+  width: 38.8888888889%;
   height: 30px;
   margin-bottom: 21px;
   font-size: 17px;
@@ -926,7 +930,7 @@ body {
   position: absolute;
   bottom: 16px;
   left: 10px;
-  width: 313px;
+  width: 86.9444444444%;
   height: 21px;
   margin: 0 auto;
   background-color: #009E54;
@@ -956,7 +960,7 @@ body {
 }
 .task .checklist__item__content-download .loading__btn {
   margin-bottom: 39px;
-  width: 126px;
+  width: 35%;
   height: 13px;
   font-size: 12px;
   font-family: "Roboto Regular", sans-serif;
@@ -974,7 +978,7 @@ body {
   color: #000000;
 }
 .task .checklist__item__content-download .loading__watch-btn {
-  width: 184px;
+  width: 51.1111111111%;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -998,7 +1002,7 @@ body {
   margin-bottom: 10px;
 }
 .task .checklist__item__content-day1 .day1__text {
-  width: 321px;
+  width: 89.1666666667%;
   margin: 0 auto 27px;
   font-size: 16px;
   font-family: "Roboto Regular", sans-serif;
@@ -1009,7 +1013,7 @@ body {
   margin-bottom: 8px;
 }
 .task .checklist__item__content-day1 .loading__btn {
-  width: 126px;
+  width: 35%;
   height: 13px;
   font-size: 12px;
   font-family: "Roboto Regular", sans-serif;
@@ -1034,7 +1038,7 @@ body {
   filter: blur(2px);
 }
 .task .checklist__item__content-done .done__text {
-  width: 330px;
+  width: 9.1666666667%;
   font-size: 19px;
   font-family: "Roboto Regular", sans-serif;
   line-height: 22px;
@@ -1050,7 +1054,7 @@ body {
   display: block;
 }
 .task__warning {
-  width: 295px;
+  width: 81.9444444444%;
   font-size: 13px;
   font-family: "Roboto Black", sans-serif;
   line-height: 13px;
@@ -1069,6 +1073,7 @@ body {
 .profile__content {
   flex: 1 0 auto;
   padding: 0 3px;
+  width: 100%;
 }
 .profile__content-title {
   font-size: 26px;
@@ -1153,7 +1158,7 @@ body {
   text-transform: uppercase;
 }
 .method__content-btn {
-  width: 184px;
+  width: 51.1111111111%;
   font-size: 17px;
   font-family: "Roboto Regular", sans-serif;
   line-height: 20px;
