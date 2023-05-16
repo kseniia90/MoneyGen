@@ -1,0 +1,663 @@
+@import './scss/normalize.scss';
+@import './scss/vars_and_mixins.scss';
+@import './scss/fonts.scss';
+// @import './scss/fonts_icon.scss';
+
+$light-green: #7AFFBF;
+$gray: #EFEFEF;
+// $icon-phone2_icon: "\e900";
+// $icon-phone_icon: "\e901";
+// $icon-mail_icon: "\e902";
+// $icon-telegram_icon: "\e903";
+// $icon-viber_icon: "\e904";
+// $icon-fb_icon: "\e905";
+
+
+body {
+    @include font($font-robotoFlex, 16px, 19px, #000000); 
+    font-weight: 300;
+}
+.container {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.img-bock {
+    @include flex(center, center, row);
+}
+.background {
+    
+}
+.banner {
+    height: 100vh;
+    @include flex(center, center, column);
+    background: $light-green;
+    background-image: url(./img/img_1.svg), linear-gradient(235.3deg, rgba(104, 255, 183, 0.88) -37.53%, rgba(12, 217, 227, 0.88) 123.11%);
+    background-repeat: no-repeat;
+    background-position: center;
+    &__title {
+        @include font($font-drukWideBold, 32px, 42px, #000000);
+    }
+    &__btn {
+        @include font($font-drukWideBold, 17px, 22px, #FFFFFF);
+        padding: 4px 8px;
+        background-color: #000000;
+        border-radius: 13px;
+    }
+}
+.title {
+    @include font($font-bold, 22px, 33px, #000000);
+    text-transform: uppercase;
+}
+.bold-text {
+    @include font($font-black, 16px, 19px, #000000);
+    font-weight: 900;
+}
+.green-btn {
+    height: 30px;
+    background-color: $light-green;
+    border: none;
+    border-radius: 21px;
+    @include font($font-robotoFlex, 17px, 20px, #000000); 
+    font-weight: 400;
+}
+.instruction {
+    height: 100vh;
+    background: $gray;
+    @include flex(center, center, column);
+    text-align: center;
+    &-content {
+        flex: 1 0 auto;
+        margin: 97px 28px 0;
+    }
+   
+    &__list {
+        margin-bottom: 40px;
+        &-item:not(:last-child) {
+             margin-bottom: 16px;
+        }
+    }
+    &__btn {
+        margin: 42px auto 78px;
+        width: 100%;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+.footer {
+    @include flex(space-between, center, row);
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 5px 11px;
+    border-radius: 32px 32px 0 0;
+    .footer-content {
+        @include flex(center, center, column);
+        &__count {
+            @include font($font-extraBold, 34px, 34px, #000000);
+        }
+        &__pending {
+            @include font($font-extraBold, 12px, 18px, #000000);
+            text-transform: uppercase;
+        }    
+    }
+    .footer-icon {
+        width: 67px;
+        height: 67px;
+        border-radius: 67px;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.06), inset 0px 0px 13px -3px rgba(0, 0, 0, 0.19);
+    }
+    .footer-icon__left {
+        background: url(./img/footer_icon_left.svg) center no-repeat;
+        position: relative;
+        &__warnings {
+            position: absolute;
+            top: -4px;
+            left: 5px;
+            @include flex(center, center, row);
+            gap: 2px;
+        }
+    }
+
+    .warning-your-tasks {
+        // position: absolute;
+        // top: -10px;
+        // left: 11px;
+        display: inline;
+        background-color: #FF0000;
+        width: auto;
+        border-radius: 45px;
+        padding: 0 5px;
+        &__count {
+            @include font($font-extraBold, 14px, 21px, #FFFFFF); 
+        }
+    }
+    .warning-new-tasks {
+        // position: absolute;
+        // top: -10px;
+        // left: 11px;
+        display: inline;
+        background-color: $light-green;
+        width: auto;
+        min-width: 20px;
+        border-radius: 50%;
+        @include flex(center, center, row);
+        // padding: 0 5px;
+        &__count {
+            @include font($font-extraBold, 14px, 21px, #000000); 
+        }
+    }
+    .footer-icon__right {
+        background: url(./img/footer_icon_right.svg) center no-repeat;
+    }
+}
+.home {
+    background: $gray;
+    height: 100vh;
+    @include flex(center, center, column);
+    &__buttons {
+        width: 100%;
+        height: 83px;
+        padding: 33px 12px 20px;
+        @include flex(space-between, center, row);
+        &-btn {
+            white-space: nowrap;
+            padding: 5px;
+            width: 165px;
+            @include flex(center, center, row);
+            @include font($font-robotoFlex, 17px, 20px, #000000); 
+            font-weight: 400;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__accordion {
+        flex: 1 0 auto;
+        padding: 0 3px;
+        width: 100%;
+    }  
+    .accordion {
+        position: relative;
+        z-index: 2;
+        &__item {
+            margin: 0 auto 20px;
+            background-color: #ffffff;
+            border-radius: 11px;
+            position: relative;
+        }
+        .warning-your-tasks {
+            position: absolute;
+            top: -10px;
+            left: 11px;
+            background-color: #FF0000;
+            width: auto;
+            border-radius: 45px;
+            padding: 0 5px;
+            &__count {
+                @include font($font-extraBold, 14px, 21px, #FFFFFF); 
+            }
+        }
+        .warning-your-tasks.hide {
+            display: none;
+        }
+        .warning-new-tasks {
+            position: absolute;
+            top: -10px;
+            left: 11px;
+            background-color: $light-green;
+            width: auto;
+            min-width: 20px;
+            border-radius: 50%;
+            @include flex(center, center, row);
+            // padding: 0 5px;
+            &__count {
+                @include font($font-extraBold, 14px, 21px, #000000); 
+            }
+        }
+        .warning-new-tasks.hide {
+            display: none;
+        }
+        &__title {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            padding: 11px 3px 9px 9px;
+            @include font($font-bold, 26px, 39px, #000000);
+            text-transform: uppercase;
+          &-text {
+            display: block;
+          }
+        }
+        &__arrow {
+            position: absolute;
+            top: 15%; 
+            right: 0;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+            @include flex(center, center, row);
+            &-item {
+                @include flex(center, center, row);
+            }
+        }
+        &__rotate {
+            transform: rotate(180deg);
+        }
+        &__content {
+            @include font($font-light, 16px, 19px, #000000); 
+            margin: 5px 3px;
+            display: none;
+            padding-bottom: 15px;
+            }
+            .task {
+                @include flex(space-between, center, row);
+                width: 100%;
+                box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+                border-radius: 10px;
+                padding: 4px 5px 4px 10px;
+                &__content {
+                    &-title {
+                        @include font($font-bold, 26px, 39px, #000000); 
+                    }
+                    &-red-text {
+                        color: #FF0000;
+                    }
+                }
+                &__img {
+                    width: 70px;
+                    height: 70px;
+                    @include flex(center, flex-end, row);
+                    padding: 4px 1px;
+                    &-price {
+                        @include font($font-drukWideBold, 12px, 16px, #1F1E1E);
+                        background-color: #FFFFFF;
+                        border-radius: 9px;
+                        width: 98%;
+                        padding: 2px 3px;
+                    }
+                }
+                &__img-one {
+                    background: url(./img/task_1.png);
+                }
+                &__img-two {
+                    background: url(./img/task_2.png);
+                }
+                &__img-three {
+                    background: url(./img/task_3.png);
+                }
+    
+        }
+    }
+}
+.task {
+    background: $gray;
+    height: 100%;
+    @include flex(center, center, column);
+    &__header {
+        width: 100%;
+        height: 83px;
+        padding: 21px 48px;
+        @include flex(center, center, row);
+        @include font($font-bold, 28px, 42px, #000000); 
+    }
+    &__checklist {
+        flex: 1 0 auto;
+        padding: 0 3px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        .task-status {
+            position: absolute;
+            top: -9px;
+            left: 8px;
+            min-width: 60px;
+            background-color: #FFFFFF;
+            border-radius: 45px;
+            padding: 0 5px;
+            @include flex(center, center, row);
+            @include font($font-bold, 13px, 20px, #000000);
+        }
+        .task-status.active, .task-status.done {
+            background-color: $light-green;
+        }
+        .task-status__circle {
+            position: absolute;
+            top: -7px;
+            left: 75px;
+            width: 13px;
+            height: 13px;
+            background-color: #DBDBDB;
+            border-radius: 50%;
+        }
+        .task-status__circle.active, .task-status__circle.done {
+            background-color: $light-green;
+        }
+        .task-status__circle.red {
+            background-color: #FF0000;
+            filter: blur(2px);
+        }
+    }  
+    .checklist {
+        &__item {
+            margin: 0 auto 20px;
+            background-color: #ffffff;
+            border-radius: 11px;
+            position: relative;
+            &__title {
+                position: relative;
+                display: block;
+                cursor: pointer;
+                padding: 28px 8px 28px 9px;
+                @include font($font-regular, 24px, 24px, #000000);
+              &-text {
+                display: block;
+              }
+            }
+            &__checkbox {
+                position: absolute;
+                top: 25%; 
+                right: 0;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                margin-left: 5px;
+                margin-right: 5px;
+                box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+                border-radius: 10px;
+                -webkit-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-out;
+                @include flex(center, center, row);
+            }
+            &__checkbox.done {
+                background-color: $light-green;
+                background-image: url(./img/check.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &__content {
+                @include font($font-light, 16px, 19px, #000000);
+                display: none; 
+            }
+            &__content-download { 
+                margin: 5px 3px;
+                padding-bottom: 15px;
+                .task {
+                    @include flex(space-between, center, row);
+                    width: 100%;
+                    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+                    border-radius: 10px;
+                    padding: 4px 5px 4px 10px;
+                    background-color: #FFFFFF;
+                    &__content {
+                        width: 100%;
+                        @include flex(center, center, column);
+                        &-step {
+                            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.13);
+                            border-radius: 20px;
+                            width: 20px;
+                            text-align: center;
+                            align-self: flex-start;
+                        }
+                        &-title {
+                            @include font($font-light, 16px, 19px, #000000); 
+                            max-width: 235px;
+                            .task__content-bolt {
+                                @include font($font-robotoBold, 16px, 19px, #000000); 
+                            }
+                        }
+                        &-text {
+                            text-align: center;
+                        }
+                        &-form {
+                            position: relative;
+                            width: 100%;
+                            background-color: $gray;
+                            height: 40px;
+                            margin: 12px auto 15px;
+                            border-radius: 10px;
+                            box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+                            padding: 11px 5px 13px 35px;
+                        }
+                        &-input {
+                            width: 100%;
+                            background-color: inherit;
+                            border: none;
+                            margin-bottom: 15px;
+                            &::placeholder {
+                                @include font($font-regular, 16px, 19px,  #000000);
+                                background-color: inherit;
+                                }
+                            &:focus { 
+                                outline: none;
+                            }
+                        }
+                        &-search {
+                            background-color: inherit;
+                            border: none;
+                            position: absolute;
+                            content: "";
+                            top: 12px;
+                            left: 10px;
+                            width: 17px;
+                            height: 17px;           
+                        }
+                        &-btn {
+                            margin: 0 auto;
+                            width: 140px;
+                            height: 30px;
+                            margin-bottom: 21px;
+                            @include font($font-regular, 17px, 20px,  #000000);
+                        }
+                        .image-btn {
+                            position: relative;
+                        }
+                        &-button {
+                            position: absolute;
+                            bottom: 16px;
+                            left: 10px;
+                            width: 313px;
+                            height: 21px;
+                            margin: 0 auto;
+                            background-color: #009E54;
+                            @include font($font-regular, 13px, 15px, #FFFFFF);
+                            border-radius: 4px;
+                            @include flex(center, center, row);
+                        }
+                    }     
+                }
+                .unorder-task {
+                    padding: 18px 5px 18px 10px;
+                }
+                .loading {
+                    @include flex(center, center, column);
+                    padding: 31px 30px;
+                    text-align: center;
+                    &__processe-icon {
+                        margin-bottom: 8px;
+                    }
+                    &__btn {
+                        margin-bottom: 39px;
+                        width: 126px;
+                        height: 13px;
+                        @include font($font-regular, 12px, 12px, #000000); 
+                    }
+                    &__youtube-icon {
+                        margin-bottom: 13px;
+                    }
+                    &__text {
+                        margin-bottom: 15px;
+                        @include font($font-regular, 18px, 18px, #000000);
+                    }
+                    &__watch-btn {
+                        width: 184px;
+                        height: 30px;
+                        @include flex(center, center, row);
+                        @include font($font-regular, 17px, 20px, #000000);
+                        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+            &__content-day1 {
+                @include flex(center, center, column);
+                padding: 0 16px 29px;
+                text-align: center;
+                .day1 {
+                    &__app-icon {
+                        margin-bottom: 10px;
+                    }
+                    &__text {
+                        width: 321px;
+                        margin: 0 auto 27px;
+                        @include font($font-regular, 16px, 19px, #000000);
+                    }
+                }
+                .loading__processe-icon {
+                    margin-bottom: 8px;
+                }
+                .loading__btn {
+                    width: 126px;
+                    height: 13px;
+                    @include font($font-regular, 12px, 12px, #000000); 
+                }
+            }
+            &__content-done {
+                @include flex(center, center, column);
+                padding: 0 16px 17px;
+                text-align: center;
+                .done {
+                    &__icon {
+                        display: block;
+                        margin-bottom: 10px;
+                        width: 72px;
+                        height: 72px;
+                        border-radius: 50%;
+                        border: 3px solid $light-green;
+                        filter: blur(2px);
+                    }
+                    &__text {
+                        width: 330px;
+                        @include font($font-regular, 19px, 22px, #000000);
+                        &-bold {
+                            @include font($font-black, 19px, 22px, #000000);
+                        }
+                    }
+                }
+            }
+        }   
+    }
+    .checklist__item.open {
+        .checklist__item__content {
+            display: block;
+        }
+    }
+    &__warning {
+        width: 295px;
+        @include font($font-robotoBold, 13px, 13px, #000000);
+        text-align: center;
+        margin: 23px auto;
+
+    }
+}
+.profile {
+    background: $gray;
+    @include flex(center, center, column);
+    height: 100vh;
+    &__content {
+        flex: 1 0 auto;
+        padding: 0 3px;
+        &-title {
+            @include font($font-bold, 26px, 31px, #000000); 
+            margin: 120px 6px 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    &__method {
+        &-limit {
+            @include font($font-regular, 16px, 19px, #000000); 
+            text-align: center;
+            height: 38px;
+            @include flex(center, flex-end, row);
+            padding-bottom: 3px;
+        }
+        &__link {
+            background-color: #FFFFFF;
+            padding: 17px 24px 17px 12px;
+            @include flex(space-between, center, row);
+            box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            &-title {
+                @include font($font-bold, 24px, 24px, #000000);
+            }
+            &-icon {
+                filter: blur(2px);
+            }
+        }
+    }
+}
+.method {
+    background: $gray;
+    @include flex(center, center, column);
+    height: 100vh;
+    &__content {
+        flex: 1 0 auto;
+        width: 100%;
+        padding: 0 3px;
+        @include flex(center, center, column);
+        &-title {
+            @include font($font-bold, 26px, 31px, #000000); 
+            margin: 183px 6px 5px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &-text {
+            @include font($font-regular, 13px, 15px, #000000);
+            text-align: center;
+        }
+        &-text-after {
+            @include font($font-light, 13px, 15px, #000000);
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &-btn {
+            width: 184px;
+            @include font($font-regular, 17px, 20px, #000000);
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            margin: 20px auto 240px;
+        }
+    }
+    &__form {
+        width: 100%;
+        margin: 20px auto 18px;
+        @include font($font-regular, 18px, 21px, #000000); 
+        &-title {
+            padding-left: 9px;
+            margin-bottom: 5px;
+        }
+        &-input {
+            width: 100%;
+            height: 35px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #FFFFFF;
+            border: none;
+            &::placeholder {
+                @include font($font-light, 15px, 18px, #000000); 
+            }
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+ 

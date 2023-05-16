@@ -1,0 +1,1199 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections   ========================================================================== */
+/* Remove the margin in all browsers. */
+body {
+  margin: 0;
+}
+
+/* Render the `main` element consistently in IE. */
+main {
+  display: block;
+}
+
+/* Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
+/* Grouping content   ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* Text-level semantics   ========================================================================== */
+/* Remove the gray background on active links in IE 10. */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+}
+
+/*
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/* Add the correct font weight in Chrome, Edge, and Safari. */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/*code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* 1 */
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content   ========================================================================== */
+/* Remove the border on images inside links in IE 10. */
+img {
+  border-style: none;
+}
+
+/* Forms   ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/* Correct the inability to style clickable types in iOS and Safari. */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+}
+
+/* Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Restore the focus styles unset by the previous rule. */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* Correct the padding in Firefox. */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+progress {
+  vertical-align: baseline;
+}
+
+/* Remove the default vertical scrollbar in IE 10+. */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/* Correct the cursor style of increment and decrement buttons in Chrome. */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-appearance: textfield;
+       appearance: textfield;
+  outline-offset: -2px; /* 2 */
+}
+
+/* Remove the inner padding in Chrome and Safari on macOS. */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive   ========================================================================== */
+/* Add the correct display in Edge, IE 10+, and Firefox. */
+details {
+  display: block;
+}
+
+/* Add the correct display in all browsers. */
+summary {
+  display: list-item;
+}
+
+/* Misc   ========================================================================== */
+/* Add the correct display in IE 10+. */
+template {
+  display: none;
+}
+
+/* Add the correct display in IE 10. */
+[hidden] {
+  display: none;
+}
+
+a,
+button,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+button:hover,
+select:hover,
+label:hover,
+a:hover {
+  cursor: pointer;
+}
+
+a:active, a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url(./fonts/Roboto-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(./fonts/Roboto-Regulag.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(./fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Black";
+  src: url(./fonts/Roboto-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prompt Bold";
+  src: url(./fonts/Prompt-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prompt Extra Bold";
+  src: url(./fonts/Prompt-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Flex";
+  src: url(./fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Wide";
+  src: url(./fonts/Druk-Wide-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-size: 16px;
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.img-bock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #7AFFBF;
+  background-image: url(./img/img_1.svg), linear-gradient(235.3deg, rgba(104, 255, 183, 0.88) -37.53%, rgba(12, 217, 227, 0.88) 123.11%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner__title {
+  font-size: 32px;
+  font-family: "Druk Wide", sans-serif;
+  line-height: 42px;
+  color: #000000;
+}
+.banner__btn {
+  font-size: 17px;
+  font-family: "Druk Wide", sans-serif;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 4px 8px;
+  background-color: #000000;
+  border-radius: 13px;
+}
+
+.title {
+  font-size: 22px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 33px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.bold-text {
+  font-size: 16px;
+  font-family: "Roboto Black", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  font-weight: 900;
+}
+
+.green-btn {
+  height: 30px;
+  background-color: #7AFFBF;
+  border: none;
+  border-radius: 21px;
+  font-size: 17px;
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 20px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.instruction {
+  height: 100vh;
+  background: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.instruction-content {
+  flex: 1 0 auto;
+  margin: 97px 28px 0;
+}
+.instruction__list {
+  margin-bottom: 40px;
+}
+.instruction__list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.instruction__btn {
+  margin: 42px auto 78px;
+  width: 100%;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  padding: 5px 11px;
+  border-radius: 32px 32px 0 0;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .footer-content__count {
+  font-size: 34px;
+  font-family: "Prompt Extra Bold", sans-serif;
+  line-height: 34px;
+  color: #000000;
+}
+.footer .footer-content__pending {
+  font-size: 12px;
+  font-family: "Prompt Extra Bold", sans-serif;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.footer .footer-icon {
+  width: 67px;
+  height: 67px;
+  border-radius: 67px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.06), inset 0px 0px 13px -3px rgba(0, 0, 0, 0.19);
+}
+.footer .footer-icon__left {
+  background: url(./img/footer_icon_left.svg) center no-repeat;
+  position: relative;
+}
+.footer .footer-icon__left__warnings {
+  position: absolute;
+  top: -4px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2px;
+}
+.footer .warning-your-tasks {
+  display: inline;
+  background-color: #FF0000;
+  width: auto;
+  border-radius: 45px;
+  padding: 0 5px;
+}
+.footer .warning-your-tasks__count {
+  font-size: 14px;
+  font-family: "Prompt Extra Bold", sans-serif;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.footer .warning-new-tasks {
+  display: inline;
+  background-color: #7AFFBF;
+  width: auto;
+  min-width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.footer .warning-new-tasks__count {
+  font-size: 14px;
+  font-family: "Prompt Extra Bold", sans-serif;
+  line-height: 21px;
+  color: #000000;
+}
+.footer .footer-icon__right {
+  background: url(./img/footer_icon_right.svg) center no-repeat;
+}
+
+.home {
+  background: #EFEFEF;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home__buttons {
+  width: 100%;
+  height: 83px;
+  padding: 33px 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.home__buttons-btn {
+  white-space: nowrap;
+  padding: 5px;
+  width: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 17px;
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 20px;
+  color: #000000;
+  font-weight: 400;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.home__accordion {
+  flex: 1 0 auto;
+  padding: 0 3px;
+  width: 100%;
+}
+.home .accordion {
+  position: relative;
+  z-index: 2;
+}
+.home .accordion__item {
+  margin: 0 auto 20px;
+  background-color: #ffffff;
+  border-radius: 11px;
+  position: relative;
+}
+.home .accordion .warning-your-tasks {
+  position: absolute;
+  top: -10px;
+  left: 11px;
+  background-color: #FF0000;
+  width: auto;
+  border-radius: 45px;
+  padding: 0 5px;
+}
+.home .accordion .warning-your-tasks__count {
+  font-size: 14px;
+  font-family: "Prompt Extra Bold", sans-serif;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.home .accordion .warning-your-tasks.hide {
+  display: none;
+}
+.home .accordion .warning-new-tasks {
+  position: absolute;
+  top: -10px;
+  left: 11px;
+  background-color: #7AFFBF;
+  width: auto;
+  min-width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.home .accordion .warning-new-tasks__count {
+  font-size: 14px;
+  font-family: "Prompt Extra Bold", sans-serif;
+  line-height: 21px;
+  color: #000000;
+}
+.home .accordion .warning-new-tasks.hide {
+  display: none;
+}
+.home .accordion__title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 11px 3px 9px 9px;
+  font-size: 26px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 39px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.home .accordion__title-text {
+  display: block;
+}
+.home .accordion__arrow {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.home .accordion__arrow-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.home .accordion__rotate {
+  transform: rotate(180deg);
+}
+.home .accordion__content {
+  font-size: 16px;
+  font-family: "Roboto Light", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  margin: 5px 3px;
+  display: none;
+  padding-bottom: 15px;
+}
+.home .accordion .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 4px 5px 4px 10px;
+}
+.home .accordion .task__content-title {
+  font-size: 26px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 39px;
+  color: #000000;
+}
+.home .accordion .task__content-red-text {
+  color: #FF0000;
+}
+.home .accordion .task__img {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  padding: 4px 1px;
+}
+.home .accordion .task__img-price {
+  font-size: 12px;
+  font-family: "Druk Wide", sans-serif;
+  line-height: 16px;
+  color: #1F1E1E;
+  background-color: #FFFFFF;
+  border-radius: 9px;
+  width: 98%;
+  padding: 2px 3px;
+}
+.home .accordion .task__img-one {
+  background: url(./img/task_1.png);
+}
+.home .accordion .task__img-two {
+  background: url(./img/task_2.png);
+}
+.home .accordion .task__img-three {
+  background: url(./img/task_3.png);
+}
+
+.task {
+  background: #EFEFEF;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.task__header {
+  width: 100%;
+  height: 83px;
+  padding: 21px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 28px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 42px;
+  color: #000000;
+}
+.task__checklist {
+  flex: 1 0 auto;
+  padding: 0 3px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.task__checklist .task-status {
+  position: absolute;
+  top: -9px;
+  left: 8px;
+  min-width: 60px;
+  background-color: #FFFFFF;
+  border-radius: 45px;
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 13px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 20px;
+  color: #000000;
+}
+.task__checklist .task-status.active, .task__checklist .task-status.done {
+  background-color: #7AFFBF;
+}
+.task__checklist .task-status__circle {
+  position: absolute;
+  top: -7px;
+  left: 75px;
+  width: 13px;
+  height: 13px;
+  background-color: #DBDBDB;
+  border-radius: 50%;
+}
+.task__checklist .task-status__circle.active, .task__checklist .task-status__circle.done {
+  background-color: #7AFFBF;
+}
+.task__checklist .task-status__circle.red {
+  background-color: #FF0000;
+  filter: blur(2px);
+}
+.task .checklist__item {
+  margin: 0 auto 20px;
+  background-color: #ffffff;
+  border-radius: 11px;
+  position: relative;
+}
+.task .checklist__item__title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 28px 8px 28px 9px;
+  font-size: 24px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 24px;
+  color: #000000;
+}
+.task .checklist__item__title-text {
+  display: block;
+}
+.task .checklist__item__checkbox {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.task .checklist__item__checkbox.done {
+  background-color: #7AFFBF;
+  background-image: url(./img/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.task .checklist__item__content {
+  font-size: 16px;
+  font-family: "Roboto Light", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  display: none;
+}
+.task .checklist__item__content-download {
+  margin: 5px 3px;
+  padding-bottom: 15px;
+}
+.task .checklist__item__content-download .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 4px 5px 4px 10px;
+  background-color: #FFFFFF;
+}
+.task .checklist__item__content-download .task__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.task .checklist__item__content-download .task__content-step {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 20px;
+  width: 20px;
+  text-align: center;
+  align-self: flex-start;
+}
+.task .checklist__item__content-download .task__content-title {
+  font-size: 16px;
+  font-family: "Roboto Light", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  max-width: 235px;
+}
+.task .checklist__item__content-download .task__content-title .task__content-bolt {
+  font-size: 16px;
+  font-family: "Roboto Black", sans-serif;
+  line-height: 19px;
+  color: #000000;
+}
+.task .checklist__item__content-download .task__content-text {
+  text-align: center;
+}
+.task .checklist__item__content-download .task__content-form {
+  position: relative;
+  width: 100%;
+  background-color: #EFEFEF;
+  height: 40px;
+  margin: 12px auto 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+  padding: 11px 5px 13px 35px;
+}
+.task .checklist__item__content-download .task__content-input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  margin-bottom: 15px;
+}
+.task .checklist__item__content-download .task__content-input::-moz-placeholder {
+  font-size: 16px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  background-color: inherit;
+}
+.task .checklist__item__content-download .task__content-input::placeholder {
+  font-size: 16px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  background-color: inherit;
+}
+.task .checklist__item__content-download .task__content-input:focus {
+  outline: none;
+}
+.task .checklist__item__content-download .task__content-search {
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+}
+.task .checklist__item__content-download .task__content-btn {
+  margin: 0 auto;
+  width: 140px;
+  height: 30px;
+  margin-bottom: 21px;
+  font-size: 17px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 20px;
+  color: #000000;
+}
+.task .checklist__item__content-download .task__content .image-btn {
+  position: relative;
+}
+.task .checklist__item__content-download .task__content-button {
+  position: absolute;
+  bottom: 16px;
+  left: 10px;
+  width: 313px;
+  height: 21px;
+  margin: 0 auto;
+  background-color: #009E54;
+  font-size: 13px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 15px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.task .checklist__item__content-download .unorder-task {
+  padding: 18px 5px 18px 10px;
+}
+.task .checklist__item__content-download .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 31px 30px;
+  text-align: center;
+}
+.task .checklist__item__content-download .loading__processe-icon {
+  margin-bottom: 8px;
+}
+.task .checklist__item__content-download .loading__btn {
+  margin-bottom: 39px;
+  width: 126px;
+  height: 13px;
+  font-size: 12px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 12px;
+  color: #000000;
+}
+.task .checklist__item__content-download .loading__youtube-icon {
+  margin-bottom: 13px;
+}
+.task .checklist__item__content-download .loading__text {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 18px;
+  color: #000000;
+}
+.task .checklist__item__content-download .loading__watch-btn {
+  width: 184px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 17px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 20px;
+  color: #000000;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.task .checklist__item__content-day1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 16px 29px;
+  text-align: center;
+}
+.task .checklist__item__content-day1 .day1__app-icon {
+  margin-bottom: 10px;
+}
+.task .checklist__item__content-day1 .day1__text {
+  width: 321px;
+  margin: 0 auto 27px;
+  font-size: 16px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 19px;
+  color: #000000;
+}
+.task .checklist__item__content-day1 .loading__processe-icon {
+  margin-bottom: 8px;
+}
+.task .checklist__item__content-day1 .loading__btn {
+  width: 126px;
+  height: 13px;
+  font-size: 12px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 12px;
+  color: #000000;
+}
+.task .checklist__item__content-done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 16px 17px;
+  text-align: center;
+}
+.task .checklist__item__content-done .done__icon {
+  display: block;
+  margin-bottom: 10px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #7AFFBF;
+  filter: blur(2px);
+}
+.task .checklist__item__content-done .done__text {
+  width: 330px;
+  font-size: 19px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 22px;
+  color: #000000;
+}
+.task .checklist__item__content-done .done__text-bold {
+  font-size: 19px;
+  font-family: "Roboto Black", sans-serif;
+  line-height: 22px;
+  color: #000000;
+}
+.task .checklist__item.open .checklist__item__content {
+  display: block;
+}
+.task__warning {
+  width: 295px;
+  font-size: 13px;
+  font-family: "Roboto Black", sans-serif;
+  line-height: 13px;
+  color: #000000;
+  text-align: center;
+  margin: 23px auto;
+}
+
+.profile {
+  background: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.profile__content {
+  flex: 1 0 auto;
+  padding: 0 3px;
+}
+.profile__content-title {
+  font-size: 26px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 31px;
+  color: #000000;
+  margin: 120px 6px 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.profile__method-limit {
+  font-size: 16px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 19px;
+  color: #000000;
+  text-align: center;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  padding-bottom: 3px;
+}
+.profile__method__link {
+  background-color: #FFFFFF;
+  padding: 17px 24px 17px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+}
+.profile__method__link-title {
+  font-size: 24px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 24px;
+  color: #000000;
+}
+.profile__method__link-icon {
+  filter: blur(2px);
+}
+
+.method {
+  background: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.method__content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.method__content-title {
+  font-size: 26px;
+  font-family: "Prompt Bold", sans-serif;
+  line-height: 31px;
+  color: #000000;
+  margin: 183px 6px 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.method__content-text {
+  font-size: 13px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 15px;
+  color: #000000;
+  text-align: center;
+}
+.method__content-text-after {
+  font-size: 13px;
+  font-family: "Roboto Light", sans-serif;
+  line-height: 15px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+.method__content-btn {
+  width: 184px;
+  font-size: 17px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 20px;
+  color: #000000;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px auto 240px;
+}
+.method__form {
+  width: 100%;
+  margin: 20px auto 18px;
+  font-size: 18px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 21px;
+  color: #000000;
+}
+.method__form-title {
+  padding-left: 9px;
+  margin-bottom: 5px;
+}
+.method__form-input {
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border: none;
+}
+.method__form-input::-moz-placeholder {
+  font-size: 15px;
+  font-family: "Roboto Light", sans-serif;
+  line-height: 18px;
+  color: #000000;
+}
+.method__form-input::placeholder {
+  font-size: 15px;
+  font-family: "Roboto Light", sans-serif;
+  line-height: 18px;
+  color: #000000;
+}/*# sourceMappingURL=main.css.map */

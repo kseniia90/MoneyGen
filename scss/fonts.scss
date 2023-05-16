@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Roboto Light';
+    src: url(./fonts/Roboto-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+$font-light: 'Roboto Light', sans-serif;
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url(./fonts/Roboto-Regulag.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+$font-regular: 'Roboto Regular', sans-serif;
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url(./fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+$font-robotoBold: 'Roboto Black', sans-serif;
+
+@font-face {
+    font-family: 'Roboto Black';
+    src: url(./fonts/Roboto-Black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+$font-black: 'Roboto Black', sans-serif;
+
+@font-face {
+    font-family: 'Prompt Bold';
+    src: url(./fonts/Prompt-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+$font-bold: 'Prompt Bold', sans-serif;
+
+@font-face {
+    font-family: 'Prompt Extra Bold';
+    src: url(./fonts/Prompt-ExtraBold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+$font-extraBold: 'Prompt Extra Bold', sans-serif;
+
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url(./fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+$font-robotoFlex: 'Roboto Flex', sans-serif;
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url(./fonts/Druk-Wide-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+$font-drukWideBold: 'Druk Wide', sans-serif;
