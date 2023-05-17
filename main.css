@@ -352,6 +352,7 @@ body {
 .container {
   margin: 0 auto;
   min-height: 100vh;
+  padding-bottom: 80px;
 }
 
 .img-bock {
@@ -656,6 +657,10 @@ body {
   background-color: #ffffff;
   padding: 5px 11px;
   border-radius: 32px 32px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
 }
 .footer .footer-content {
   display: flex;

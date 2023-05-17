@@ -12,14 +12,12 @@ body {
 .container {
     margin: 0 auto;
     min-height: 100vh;
+    padding-bottom: 80px;
     // min-height: -webkit-fill-available;
 }
 
 .img-bock {
     @include flex(center, center, row);
-}
-.background {
-    
 }
 .banner {
     @include flex(center, center, column);
@@ -244,6 +242,10 @@ body {
     background-color: #ffffff;
     padding: 5px 11px;
     border-radius: 32px 32px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
     .footer-content {
         @include flex(center, center, column);
         &__count {
