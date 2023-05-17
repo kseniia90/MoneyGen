@@ -1092,7 +1092,7 @@ body {
 }
 .profile__content {
   flex: 1 0 auto;
-  padding: 0 5px;
+  padding: 0 5px 175px;
   width: 100%;
 }
 .profile__content-title {
@@ -1100,7 +1100,7 @@ body {
   font-family: "Prompt Bold", sans-serif;
   line-height: 31px;
   color: #000000;
-  margin: 120px 6px 15px;
+  margin: 15% 6px 15px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -1184,7 +1184,7 @@ body {
   line-height: 20px;
   color: #000000;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  margin: 20px auto;
+  margin: 20px auto 200px;
 }
 .method__form {
   width: 100%;
