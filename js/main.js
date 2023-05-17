@@ -1,3 +1,12 @@
+// preload home page
+window.setTimeout(function () {
+  document.body.classList.add('loaded_hiding');
+}, 1400);
+window.setTimeout(function () {
+  document.body.classList.add('loaded');
+  document.body.classList.remove('loaded_hiding');
+}, 1500);
+
 $(function () {
   // accordion
   $(".accordion__title").on("click", function (e) {
@@ -21,7 +30,8 @@ $(function () {
   //   var $this = $(this);
   //   $this.toggleClass("open");
   //   $(".checklist__item__checkbox", this).addClass("done");
-  //   $(".task-status", this).addClass("active");
-  //   $(".task-status__circle", this).addClass("active");
+  //   $(".task-status", this).addClass("green");
+  //   $(".task-status__circle", this).addClass("green");
   // });
 });
+

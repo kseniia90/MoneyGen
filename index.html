@@ -6,14 +6,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
-    <title>MoneyGen</title>
+    <title>MoneyGen Home page</title>
 </head>
 
 <body>
-    <section class="banner container">
+    <section class="banner container preloader">
         <p class="banner__title">MoneyGen</p>
         <a href="#" class="banner__btn">Test apps and earn cash</a>
     </section>
+    <section class="home container">
+        <div class="content">
+            <div class="home__buttons">
+            <a href="./instruction.html" class="home__buttons-btn green-btn">Instruction</a>
+            <a href="./instruction.html" class="home__buttons-btn green-btn">Video Explanation</a>
+        </div>
+        <div class="home__accordion">
+            <div class="accordion">
+                <div class="accordion__item">
+                    <div class="warning-your-tasks">
+                        <span>⚠️</span><span class="warning-your-tasks__count">1</span>
+                    </div>
+                    <div class="accordion__title">
+                        <span class="accordion__title-text">Your tasks</span>
+                        <div class="accordion__arrow">
+                            <span class="accordion__arrow-item "> <img src="./img/accordion_arrow.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="accordion__content">
+                        <a href="">
+                            <div class="task">
+                                <div class="task__content">
+                                    <p class="task__content-title">Test: BIazer <span
+                                            class="task__content-warning">⚠️</span></p>
+                                    <p class="task__content-text task__content-red-text">Open this app today!</p>
+                                </div>
+                                <div class="task__img  task__img-one">
+                                    <p class="task__img-price">$0,50</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="task">
+                                <div class="task__content">
+                                    <p class="task__content-title">Test: Name app </p>
+                                    <p class="task__content-text">Complete 3 more tasks to receive...</p>
+                                </div>
+                                <div class="task__img task__img-two">
+                                    <p class="task__img-price">$0,30</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="task">
+                                <div class="task__content">
+                                    <p class="task__content-title">Test: Name app </p>
+                                    <p class="task__content-text">Complete 5 more tasks to receive...</p>
+                                </div>
+                                <div class="task__img task__img-three">
+                                    <p class="task__img-price">$0,40</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <div class="warning-new-tasks">
+                        <span class="warning-new-tasks__count">1</span>
+                    </div>
+                    <div class="accordion__title">
+                        <span class="accordion__title-text">New tasks</span>
+                        <div class="accordion__arrow">
+                            <span class="accordion__arrow-item "> <img src="./img/accordion_arrow.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="accordion__content">
+                        <a href="">
+                            <div class="task">
+                                <div class="task__content">
+                                    <p class="task__content-title">Test: Name app </p>
+                                    <p class="task__content-text">Test this app and get money!</p>
+                                </div>
+                                <div class="task__img task__img-two">
+                                    <p class="task__img-price">$0,20</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__title">
+                        <span class="accordion__title-text">Finished tasks</span>
+                        <div class="accordion__arrow">
+                            <span class="accordion__arrow-item "> <img src="./img/accordion_arrow.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="accordion__content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-icon footer-icon__left">
+                <div class=" footer-icon__left__warnings">
+                    <div class="warning-new-tasks">
+                        <span class="warning-new-tasks__count">1</span>
+                    </div>
+                    <div class="warning-your-tasks">
+                        <span>⚠️</span><span class="warning-your-tasks__count">1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p class="footer-content__count">$0,00</p>
+                <p class="footer-content__pending">Pending $1,50</p>
+            </div>
+            <div class="footer-icon footer-icon__right">
+            </div>
+        </footer>
+    </section>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

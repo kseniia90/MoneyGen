@@ -12,6 +12,7 @@ body {
 .container {
     margin: 0 auto;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 .img-bock {
@@ -73,77 +74,27 @@ body {
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     }
 }
-.footer {
-    @include flex(space-between, center, row);
-    width: 100%;
-    height: 80px;
-    background-color: #ffffff;
-    padding: 5px 11px;
-    border-radius: 32px 32px 0 0;
-    .footer-content {
-        @include flex(center, center, column);
-        &__count {
-            @include font($font-extraBold, 34px, 34px, #000000);
-        }
-        &__pending {
-            @include font($font-extraBold, 12px, 18px, #000000);
-            text-transform: uppercase;
-        }    
-    }
-    .footer-icon {
-        width: 67px;
-        height: 67px;
-        border-radius: 67px;
-        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.06), inset 0px 0px 13px -3px rgba(0, 0, 0, 0.19);
-    }
-    .footer-icon__left {
-        background: url(./img/footer_icon_left.svg) center no-repeat;
-        position: relative;
-        &__warnings {
-            position: absolute;
-            top: -4px;
-            left: 5px;
-            @include flex(center, center, row);
-            gap: 2px;
-        }
-    }
-
-    .warning-your-tasks {
-        // position: absolute;
-        // top: -10px;
-        // left: 11px;
-        display: inline;
-        background-color: #FF0000;
-        width: auto;
-        border-radius: 45px;
-        padding: 0 5px;
-        &__count {
-            @include font($font-extraBold, 14px, 21px, #FFFFFF); 
-        }
-    }
-    .warning-new-tasks {
-        // position: absolute;
-        // top: -10px;
-        // left: 11px;
-        display: inline;
-        background-color: $light-green;
-        width: auto;
-        min-width: 20px;
-        border-radius: 50%;
-        @include flex(center, center, row);
-        // padding: 0 5px;
-        &__count {
-            @include font($font-extraBold, 14px, 21px, #000000); 
-        }
-    }
-    .footer-icon__right {
-        background: url(./img/footer_icon_right.svg) center no-repeat;
-    }
-}
 .content {
     flex: 1 0 auto;
     width: 100%;
 }
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+}
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+  
+.loaded .preloader {
+    display: none;
+}
+  
 .home {
     background: $gray;
     @include flex(center, center, column);
@@ -164,7 +115,7 @@ body {
     }
     &__accordion {
         flex: 1 0 auto;
-        padding: 0 3px;
+        padding: 0 5px;
         width: 100%;
     }  
     .accordion {
@@ -212,7 +163,7 @@ body {
             position: relative;
             display: block;
             cursor: pointer;
-            padding: 11px 3px 9px 9px;
+            padding: 11px 5px 9px 9px;
             @include font($font-bold, 26px, 39px, #000000);
             text-transform: uppercase;
           &-text {
@@ -286,6 +237,73 @@ body {
         }
     }
 }
+.footer {
+    @include flex(space-between, center, row);
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 5px 11px;
+    border-radius: 32px 32px 0 0;
+    .footer-content {
+        @include flex(center, center, column);
+        &__count {
+            @include font($font-extraBold, 34px, 34px, #000000);
+        }
+        &__pending {
+            @include font($font-extraBold, 12px, 18px, #000000);
+            text-transform: uppercase;
+        }    
+    }
+    .footer-icon {
+        width: 67px;
+        height: 67px;
+        border-radius: 67px;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.06), inset 0px 0px 13px -3px rgba(0, 0, 0, 0.19);
+    }
+    .footer-icon__left {
+        background: url(./img/footer_icon_left.svg) center no-repeat;
+        position: relative;
+        &__warnings {
+            position: absolute;
+            top: -4px;
+            left: 5px;
+            @include flex(center, center, row);
+            gap: 2px;
+        }
+    }
+
+    .warning-your-tasks {
+        // position: absolute;
+        // top: -10px;
+        // left: 11px;
+        display: inline;
+        background-color: #FF0000;
+        width: auto;
+        border-radius: 45px;
+        padding: 0 5px;
+        &__count {
+            @include font($font-extraBold, 14px, 21px, #FFFFFF); 
+        }
+    }
+    .warning-new-tasks {
+        // position: absolute;
+        // top: -10px;
+        // left: 11px;
+        display: inline;
+        background-color: $light-green;
+        width: auto;
+        min-width: 20px;
+        border-radius: 50%;
+        @include flex(center, center, row);
+        // padding: 0 5px;
+        &__count {
+            @include font($font-extraBold, 14px, 21px, #000000); 
+        }
+    }
+    .footer-icon__right {
+        background: url(./img/footer_icon_right.svg) center no-repeat;
+    }
+}
 .task {
     background: $gray;
     height: 100%;
@@ -299,7 +317,7 @@ body {
     }
     &__checklist {
         flex: 1 0 auto;
-        padding: 0 3px;
+        padding: 0 5px;
         width: 100%;
         position: relative;
         z-index: 2;
@@ -314,7 +332,7 @@ body {
             @include flex(center, center, row);
             @include font($font-bold, 13px, 20px, #000000);
         }
-        .task-status.active, .task-status.done {
+        .task-status.green {
             background-color: $light-green;
         }
         .task-status__circle {
@@ -326,12 +344,13 @@ body {
             background-color: #DBDBDB;
             border-radius: 50%;
         }
-        .task-status__circle.active, .task-status__circle.done {
+        .task-status__circle.green {
             background-color: $light-green;
         }
         .task-status__circle.red {
             background-color: #FF0000;
             filter: blur(2px);
+            transition: all ease .5s;
         }
     }  
     .checklist {
@@ -397,8 +416,8 @@ body {
                         }
                         &-title {
                             @include font($font-light, 16px, 19px, #000000); 
-                            // max-width: 235px;
                             max-width: calc(235/360*100%);
+                            text-align: center;
                             .task__content-bolt {
                                 @include font($font-robotoBold, 16px, 19px, #000000); 
                             }
@@ -453,7 +472,7 @@ body {
                             position: absolute;
                             bottom: 16px;
                             left: 10px;
-                            width: calc(313/360*100%);
+                            width: 313px; // green button on screenshot img
                             height: 21px;
                             margin: 0 auto;
                             background-color: #009E54;
@@ -533,7 +552,7 @@ body {
                         filter: blur(2px);
                     }
                     &__text {
-                        width: calc(33/0360*100%);
+                        width: calc(330/360*100%);
                         @include font($font-regular, 19px, 22px, #000000);
                         &-bold {
                             @include font($font-black, 19px, 22px, #000000);
@@ -561,7 +580,7 @@ body {
     @include flex(center, center, column);
     &__content {
         flex: 1 0 auto;
-        padding: 0 3px;
+        padding: 0 5px;
         width: 100%;
         &-title {
             @include font($font-bold, 26px, 31px, #000000); 
@@ -599,7 +618,7 @@ body {
     &__content {
         flex: 1 0 auto;
         width: 100%;
-        padding: 0 3px;
+        padding: 0 5px;
         @include flex(center, center, column);
         &-title {
             @include font($font-bold, 26px, 31px, #000000); 
