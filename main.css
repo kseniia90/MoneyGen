@@ -301,8 +301,14 @@ ul {
 }
 @font-face {
   font-family: "Roboto Regular";
-  src: url(./fonts/Roboto-Regulag.ttf);
+  src: url(./fonts/Roboto-Regular.ttf);
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url(./fonts/Roboto-Medium.ttf);
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -414,6 +420,12 @@ body {
   line-height: 20px;
   color: #000000;
   font-weight: 400;
+  box-shadow: 0px 0px 4px #7AFFBF;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.warning-icon {
+  font-size: 13px;
 }
 
 .instruction {
@@ -427,6 +439,11 @@ body {
 .instruction-content {
   flex: 1 0 auto;
   margin: 97px 28px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .instruction__list {
   margin-bottom: 40px;
@@ -435,10 +452,33 @@ body {
   margin-bottom: 16px;
 }
 .instruction__btn {
+  display: block;
   margin: 42px auto 78px;
-  width: 100%;
+  width: 76.9444444444%;
   text-transform: uppercase;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.instruction__video {
+  width: 97.5%;
+  height: 22.375%;
+  background-color: #D9D9D9;
+  position: relative;
+  margin-top: 20px;
+  border-radius: 11px;
+}
+.instruction__video .video-play {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .content {
@@ -740,6 +780,60 @@ body {
   background: url(./img/footer_icon_right.svg) center no-repeat;
 }
 
+.center {
+  height: 20px;
+  width: 27.6666666667;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.wave {
+  width: 5px;
+  height: 15px;
+  background: linear-gradient(45deg, #7AFFBF, #7AFFBF);
+  margin: 5px;
+  animation: wave 1s linear infinite;
+  border-radius: 2px;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .task {
   background: #EFEFEF;
   height: 100%;
@@ -862,12 +956,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
   border-radius: 10px;
-  padding: 4px 5px 4px 10px;
+  padding: 4px 5px 4px 4px;
   background-color: #FFFFFF;
 }
 .task .checklist__item__content-download .task__content {
@@ -876,6 +970,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 21px;
 }
 .task .checklist__item__content-download .task__content-step {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.13);
@@ -883,13 +978,17 @@ body {
   width: 20px;
   text-align: center;
   align-self: flex-start;
+  font-size: 16px;
+  font-family: "Roboto Medium", sans-serif;
+  line-height: 19px;
+  color: #000000;
 }
 .task .checklist__item__content-download .task__content-title {
   font-size: 16px;
   font-family: "Roboto Light", sans-serif;
   line-height: 19px;
   color: #000000;
-  max-width: 65.2777777778%;
+  max-width: 79.1666666667%;
   text-align: center;
 }
 .task .checklist__item__content-download .task__content-title .task__content-bolt {
@@ -900,6 +999,10 @@ body {
 }
 .task .checklist__item__content-download .task__content-text {
   text-align: center;
+  width: 100%;
+}
+.task .checklist__item__content-download .task__content .task__content-title-4 {
+  padding-bottom: 20px;
 }
 .task .checklist__item__content-download .task__content-form {
   position: relative;
@@ -916,20 +1019,10 @@ body {
   background-color: inherit;
   border: none;
   margin-bottom: 15px;
-}
-.task .checklist__item__content-download .task__content-input::-moz-placeholder {
   font-size: 16px;
   font-family: "Roboto Regular", sans-serif;
   line-height: 19px;
   color: #000000;
-  background-color: inherit;
-}
-.task .checklist__item__content-download .task__content-input::placeholder {
-  font-size: 16px;
-  font-family: "Roboto Regular", sans-serif;
-  line-height: 19px;
-  color: #000000;
-  background-color: inherit;
 }
 .task .checklist__item__content-download .task__content-input:focus {
   outline: none;
@@ -948,7 +1041,7 @@ body {
   margin: 0 auto;
   width: 38.8888888889%;
   height: 30px;
-  margin-bottom: 21px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   font-size: 17px;
   font-family: "Roboto Regular", sans-serif;
   line-height: 20px;
@@ -956,12 +1049,16 @@ body {
 }
 .task .checklist__item__content-download .task__content .image-btn {
   position: relative;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  padding-top: 8px;
+  margin-bottom: 23px;
 }
 .task .checklist__item__content-download .task__content-button {
   position: absolute;
   bottom: 16px;
   left: 10px;
-  width: 313px;
+  width: 315px;
   height: 21px;
   margin: 0 auto;
   background-color: #009E54;
@@ -975,9 +1072,6 @@ body {
   align-items: center;
   flex-direction: row;
 }
-.task .checklist__item__content-download .unorder-task {
-  padding: 18px 5px 18px 10px;
-}
 .task .checklist__item__content-download .loading {
   display: flex;
   justify-content: center;
@@ -985,9 +1079,6 @@ body {
   flex-direction: column;
   padding: 31px 30px;
   text-align: center;
-}
-.task .checklist__item__content-download .loading__processe-icon {
-  margin-bottom: 8px;
 }
 .task .checklist__item__content-download .loading__btn {
   margin-bottom: 39px;
@@ -1127,6 +1218,12 @@ body {
   align-items: flex-end;
   flex-direction: row;
   padding-bottom: 3px;
+}
+.profile__method .limit-mobile.red {
+  color: #FF0000;
+}
+.profile__method .limit-gift.red {
+  color: #FF0000;
 }
 .profile__method__link {
   background-color: #FFFFFF;

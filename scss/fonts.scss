@@ -8,11 +8,19 @@ $font-light: 'Roboto Light', sans-serif;
 
 @font-face {
     font-family: 'Roboto Regular';
-    src: url(./fonts/Roboto-Regulag.ttf);
+    src: url(./fonts/Roboto-Regular.ttf);
     font-weight: 400;
     font-style: normal;
 }
 $font-regular: 'Roboto Regular', sans-serif;
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url(./fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+$font-medium: 'Roboto Medium', sans-serif;
 
 @font-face {
     font-family: 'Roboto Bold';

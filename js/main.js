@@ -1,10 +1,10 @@
 // preload home page
 window.setTimeout(function () {
-  document.body.classList.add('loaded_hiding');
+  document.body.classList.add("loaded_hiding");
 }, 1400);
 window.setTimeout(function () {
-  document.body.classList.add('loaded');
-  document.body.classList.remove('loaded_hiding');
+  document.body.classList.add("loaded");
+  document.body.classList.remove("loaded_hiding");
 }, 1500);
 
 $(function () {
@@ -20,18 +20,40 @@ $(function () {
     $this.toggleClass("accordion-active");
     $this.next().slideToggle();
     $(".accordion__arrow", this).toggleClass("accordion__rotate");
-    $this.siblings(".warning-your-tasks").toggleClass("hide");
-    $this.siblings(".warning-new-tasks").toggleClass("hide");
+    // $this.siblings(".warning-your-tasks").toggleClass("hide");
+    // $this.siblings(".warning-new-tasks").toggleClass("hide");
   });
 
   // task display
-  // $(".checklist__item").on("click", function (e) {
-  //   e.preventDefault();
-  //   var $this = $(this);
-  //   $this.toggleClass("open");
-  //   $(".checklist__item__checkbox", this).addClass("done");
-  //   $(".task-status", this).addClass("green");
-  //   $(".task-status__circle", this).addClass("green");
-  // });
+  $(".checklist__item").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.addClass("open");
+    $(".checklist__item__checkbox", this).addClass("done");
+    $(".task-status", this).addClass("green");
+    $(".task-status__circle", this).toggleClass("red");
+  });
+
+  // mark in red money-limit
+  $(".method-link-mobile").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    $(".limit-gift").removeClass("red");
+    $this.siblings(".limit-mobile").toggleClass("red");
+  });
+
+  $(".method-link-gift").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    $(".limit-mobile").removeClass("red");
+    $this.siblings(".limit-gift").toggleClass("red");
+  });
 });
 
+//copy the text inside the input
+function myFunction() {
+  const copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  // alert("Copied text: " + copyText.value);
+}

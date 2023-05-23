@@ -29,8 +29,8 @@
                 </div>
                 <div class="checklist__item__content checklist__item__content-download">
                     <div class="task">
+                        <p class="task__content-step">1</p>
                         <div class="task__content">
-                            <p class="task__content-step">1</p>
                             <p class="task__content-title">Open <span class="task__content-bolt">Google Play</span> on
                                 your
                                 mobile</p>
@@ -39,21 +39,22 @@
                         </div>
                     </div>
                     <div class="task">
+                        <p class="task__content-step">2</p>
                         <div class="task__content">
-                            <p class="task__content-step">2</p>
                             <p class="task__content-title"><span class="task__content-bolt">Copy</span> and <span
                                     class="task__content-bolt">past</span> the name of the application in <span
                                     class="task__content-bolt">the search bar</span></p>
                             <form action="" class="task__content-form">
                                 <input class="task__content-input" type="text"
-                                    placeholder="BIazer Casssino by Ardylan Kristina DEV" />
+                                    value="BIazer Casssino by Ardylan Kristina DEV" id="myInput" />
                                 <button class="task__content-search"><img src="./img/search_icon.svg" alt=""></button>
                             </form>
-                            <button class="task__content-btn green-btn">Copy text</button>
+                            <button class="task__content-btn green-btn" onclick="myFunction()">Copy text</button>
 
                         </div>
                     </div>
                     <div class="task unorder-task">
+                        <p class="task__content-step">3</p>
                         <div class="task__content">
                             <p class="task__content-text">
                                 If you download the wrong application, you will not be able to use our service
@@ -64,6 +65,7 @@
                         </div>
                     </div>
                     <div class="task unorder-task">
+                        <p class="task__content-step">4</p>
                         <div class="task__content">
                             <p class="task__content-title">Click on the app to go to its page</span></p>
                             <div class="image-btn">
@@ -75,7 +77,15 @@
                         </div>
                     </div>
                     <div class="loading">
-                        <img src="./img/loading.svg" alt="" class="loading__processe-icon">
+                        <div class="center">
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                        </div>
                         <a href="" class="green-btn loading__btn">Loading</a>
                         <a href="" class="loading__youtube-icon"><img src="./img/YouTube_full-color.png" alt=""></a>
                         <p class="loading__text">Stil didnt get it? Watch the video instruction on YouTube:</p>
@@ -160,22 +170,21 @@
         </div>
 
         <footer class="footer">
-            <div class="footer-icon footer-icon__left">
+            <a href="./index.html" class="footer-icon footer-icon__left">
                 <div class=" footer-icon__left__warnings">
                     <div class="warning-new-tasks">
                         <span class="warning-new-tasks__count">1</span>
                     </div>
                     <div class="warning-your-tasks">
-                        <span>⚠️</span><span class="warning-your-tasks__count">1</span>
+                        <span class="warning-icon">⚠️</span><span class="warning-your-tasks__count">1</span>
                     </div>
                 </div>
-            </div>
+            </a>
             <div class="footer-content">
                 <p class="footer-content__count">$0,00</p>
                 <p class="footer-content__pending">Pending $1,50</p>
             </div>
-            <div class="footer-icon footer-icon__right">
-            </div>
+            <a href="./profile_and_balance.html" class="footer-icon footer-icon__right"></a>
         </footer>
     </section>
     <script src="./lib/jquery.min.js"></script>
