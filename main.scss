@@ -430,11 +430,12 @@ body {
             position: absolute;
             top: -7px;
             left: 75px;
-            width: 17px;
-            height: 17px;
+            width: 19px;
+            height: 19px;
             // background-color: #DBDBDB;
-            // border-radius: 50%;
-            // filter: blur(2px);
+            border-radius: 50%;
+            // filter: blur(0.5px);
+            // box-shadow: 3px #DBDBDB;
             background: url(./img/gray_circle.svg);
             background-position: center;
             background-repeat: no-repeat;
