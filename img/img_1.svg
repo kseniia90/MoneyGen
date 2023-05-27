@@ -21,6 +21,7 @@
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 </defs>
+
  	<animateTransform 
     attributeName="transform" 
     type="rotate" 
