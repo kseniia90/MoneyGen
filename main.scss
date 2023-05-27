@@ -48,10 +48,10 @@ body {
     background-color: $light-green;
     border: none;
     border-radius: 21px;
-    @include font($font-robotoFlex, 17px, 20px, #000000); 
-    font-weight: 400;
-    box-shadow: 0px 0px 4px $light-green;
+    box-shadow: 1px 1px 3px 2px $light-green;
+    @include font($font-regular, 17px, 20px, #000000);
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    padding: 5px 10px;
 }
 .warning-icon {
     font-size: 13px;
@@ -60,9 +60,9 @@ body {
     background: $gray;
     @include flex(center, center, column);
     text-align: center;
+    padding: 40px 25px;
     &-content {
         flex: 1 0 auto;
-        margin: 97px 28px 0;
         width: 100%;
         @include flex(center, center, column);
     }
@@ -133,9 +133,6 @@ body {
             padding: 5px;
             width: calc(165/360*100%);
             @include flex(center, center, row);
-            @include font($font-robotoFlex, 17px, 20px, #000000); 
-            font-weight: 400;
-            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
         }
     }
     &__accordion {
@@ -418,18 +415,27 @@ body {
             position: absolute;
             top: -7px;
             left: 75px;
-            width: 13px;
-            height: 13px;
-            background-color: #DBDBDB;
-            border-radius: 50%;
-            filter: blur(2px);
+            width: 17px;
+            height: 17px;
+            // background-color: #DBDBDB;
+            // border-radius: 50%;
+            // filter: blur(2px);
+            background: url(./img/gray_circle.svg);
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .task-status__circle.green {
-            background-color: $light-green;
-            
+            // background-color: $light-green;
+            background: url(./img/green_circle.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all ease .5s;
         }
         .task-status__circle.red {
-            background-color: #FF0000;
+            // background-color: #FF0000;
+            background: url(./img/red_circle.svg);
+            background-position: center;
+            background-repeat: no-repeat;
             transition: all ease .5s;
         }
     }  
@@ -505,6 +511,21 @@ body {
                                 @include font($font-robotoBold, 16px, 19px, #000000); 
                             }
                         }
+                        &__img-block {
+                            @include flex(flex-start, center, row);
+                            gap: 16px;
+                            margin: 11px auto 17px;
+                            padding: 10px 14px;
+                            box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
+                            border-radius: 7px;
+                            min-width: 95.19774%; /* 337/354 */
+                            &-title {
+                                @include font($font-medium, 17px, 20px, #000000); 
+                            }
+                            &-text {
+                                @include font($font-light, 15px, 18px, #000000); 
+                            }
+                        }
                         &-text {
                             text-align: center;
                             width: 100%;
@@ -550,17 +571,28 @@ body {
                             @include font($font-regular, 17px, 20px,  #000000);
                         }
                         .image-btn {
-                            position: relative;
+                            // position: relative;
                             box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.06);
                             border-radius: 10px;
-                            padding-top: 8px;
-                            margin-bottom: 23px;
+                            // border: 1px solid red;
+                            padding: 7px 13px 10px 11px;
+                            margin: 5px auto 25px;
+                            min-width: 95.19774%; /* 337/354 */
+                            .task__content__img-block {
+                                @include flex(flex-start, center, row);
+                                gap: 16px;
+                                margin: 0px auto 3px;
+                                padding: 0px 0px;
+                                box-shadow: none;
+                                border-radius: none;
+                                min-width: 95.19774%; /* 337/354 */
+                                &-green-text {
+                                    @include font($font-robotoBold, 15px, 18px, #3B8662); 
+                                }
+                            }
                         }
                         &-button {
-                            position: absolute;
-                            bottom: 16px;
-                            left: 10px;
-                            width: 315px; // green button on screenshot img
+                            width: 100%;
                             height: 21px;
                             margin: 0 auto;
                             background-color: #009E54;
@@ -572,27 +604,40 @@ body {
                 }
                 .loading {
                     @include flex(center, center, column);
-                    padding: 31px 30px;
+                    padding: 31px 15px;
                     text-align: center;
                     &__btn {
-                        margin-bottom: 39px;
-                        width: calc(126/360*100%);
-                        height: 13px;
                         @include font($font-regular, 12px, 12px, #000000); 
+                        font-weight: 400;
                     }
                     &__youtube-icon {
-                        margin-bottom: 13px;
+                        margin: 40px auto 13px;
                     }
                     &__text {
                         margin-bottom: 15px;
                         @include font($font-regular, 18px, 18px, #000000);
+                        font-weight: 400;
+                    }
+                    &__button {
+                        white-space: nowrap;
+                        @include flex(center, center, row);
+                    }
+                    .loading__done-btn {
+                        margin: 30px auto; // тільки для візуалізації. прибрати!!! 
+                    }
+                    &__try-again {
+                        @include flex(center, center, column);
+                        &-text {
+                            @include font($font-regular, 17px, 17px, #FF0000);
+                            font-weight: 400; 
+                            margin-bottom: 14px;
+                        }
+                    }
+                    &__done-btn, &__try-again-btn {
+                        width: 49.647887%; /* 141/284 */
                     }
                     &__watch-btn {
-                        width: calc(184/360*100%);
-                        height: 30px;
-                        @include flex(center, center, row);
-                        @include font($font-regular, 17px, 20px, #000000);
-                        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+                        width: 64.788732%; /* 184/284 */
                     }
                 }
             }
@@ -614,8 +659,6 @@ body {
                     margin-bottom: 8px;
                 }
                 .loading__btn {
-                    width: calc(126/360*100%);
-                    height: 13px;
                     @include font($font-regular, 12px, 12px, #000000); 
                 }
             }

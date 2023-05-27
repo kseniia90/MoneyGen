@@ -39,14 +39,18 @@ $(function () {
     e.preventDefault();
     var $this = $(this);
     $(".limit-gift").removeClass("red");
+    $(".limit-gift").text( "From 10$" );
     $this.siblings(".limit-mobile").toggleClass("red");
+    $this.siblings(".limit-mobile").text("You don't have enough money");
   });
 
   $(".method-link-gift").on("click", function (e) {
     e.preventDefault();
     var $this = $(this);
     $(".limit-mobile").removeClass("red");
+    $(".limit-mobile").text( "From 10$" );
     $this.siblings(".limit-gift").toggleClass("red");
+    $this.siblings(".limit-gift").text("You don't have enough money");
   });
 });
 
