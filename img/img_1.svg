@@ -21,11 +21,11 @@
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 </defs>
-
+<!-- 
  	<animateTransform 
     attributeName="transform" 
     type="rotate" 
     dur="5s" 
     values="0 0 0;360 0 0;" 
-    repeatCount="indefinite"/>
+    repeatCount="indefinite"/> -->
 </svg>

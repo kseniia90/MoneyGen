@@ -22,19 +22,34 @@ body {
 .banner {
     @include flex(center, center, column);
     background: $light-green;
-    background-image: url(./img/img_1.svg), linear-gradient(235.3deg, rgba(104, 255, 183, 0.88) -37.53%, rgba(12, 217, 227, 0.88) 123.11%);
+    background-image:  linear-gradient(235.3deg, rgba(104, 255, 183, 0.88) -37.53%, rgba(12, 217, 227, 0.88) 123.11%);
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
     &__title {
         @include font($font-drukWideBold, 32px, 42px, #000000);
+        z-index: 3;
     }
     &__btn {
         @include font($font-drukWideBold, 17px, 22px, #FFFFFF);
         padding: 4px 8px;
         background-color: #000000;
         border-radius: 13px;
+        z-index: 3;
     }
+    &__img {
+        position: absolute;
+        top: center;
+        left: center;
+        animation: spin 5s linear 0s infinite;
+    }
+        
 }
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to   {transform:rotate(360deg);}
+    }
+
 .title {
     @include font($font-bold, 22px, 33px, #000000);
     text-transform: uppercase;
